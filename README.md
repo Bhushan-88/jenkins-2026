@@ -15,4 +15,5 @@ sudo apt update
 sudo apt install jenkins
 
 root@ubuntu:~# systemctl status jenkins.service
+
 ```
