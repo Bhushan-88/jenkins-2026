@@ -19,5 +19,5 @@ root@ubuntu:~# cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
 ## jenkins plugin 
-SSH Build Agents plugin
+SSH Build Agents plugin -- Allows to launch agents over SSH, using a Java implementation of the SSH protocol.
 Git plugin - This plugin integrates Git with Jenkins.
