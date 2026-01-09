@@ -18,4 +18,5 @@ root@ubuntu:~# systemctl status jenkins.service
 root@ubuntu:~# cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-## 
+## jenkins plugin 
+SSH Build Agents plugin
