@@ -20,4 +20,4 @@ root@ubuntu:~# cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ## jenkins plugin 
 SSH Build Agents plugin
-Git plugin
+Git plugin - This plugin integrates Git with Jenkins.
