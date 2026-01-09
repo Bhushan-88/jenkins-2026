@@ -23,5 +23,5 @@ SSH Build Agents plugin -- Allows to launch agents over SSH, using a Java implem
 Git plugin - This plugin integrates Git with Jenkins.
 Build Authorization Token Root -->Lets build and related REST build triggers be accessed even when anonymous users cannot see Jenkins.
 
-after pulgin  installation
+after pulgin installation
 http://10.224.82.79:8080/buildByToken/build?job=node01&token=mytoken
