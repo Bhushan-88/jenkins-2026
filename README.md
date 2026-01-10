@@ -28,4 +28,5 @@ Build Authorization Token Root -->Lets build and related REST build triggers be 
 after pulgin installation
 http://10.224.82.79:8080/buildByToken/build?job=node01&token=mytoken
 
-## ipeline
+## Pipeline
+A Jenkins Pipeline is a Pipeline-as-Code implementation that defines the entire CI/CD workflow in code (Groovy DSL) instead of UI clicks.
