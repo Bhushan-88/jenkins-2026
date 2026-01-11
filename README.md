@@ -42,3 +42,7 @@ Reduce complexity
 Enforce best practices
 Make pipelines readable and predictable
 
+##
+What Is Scripted Pipeline ?
+
+Scripted Pipeline is pure Groovy scripting.
