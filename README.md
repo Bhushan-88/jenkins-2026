@@ -46,3 +46,15 @@ Make pipelines readable and predictable
 What Is Scripted Pipeline ?
 
 Scripted Pipeline is pure Groovy scripting.Full programming control with no safety rails
+
+Characteristics
+
+Flexible
+
+Powerful
+
+Complex
+
+Harder to maintain
+
+Used in legacy pipelines or very complex logic
