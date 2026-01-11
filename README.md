@@ -35,6 +35,7 @@ A Jenkins Pipeline is a Pipeline-as-Code implementation that defines the entire 
 
 ##
 What Is Declarative Pipeline ?
+
 Declarative Pipeline is a structured, opinionated syntax introduced to:
 
 Reduce complexity
