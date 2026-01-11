@@ -50,11 +50,7 @@ Scripted Pipeline is pure Groovy scripting.Full programming control with no safe
 Characteristics
 
 Flexible
-
 Powerful
-
 Complex
-
 Harder to maintain
-
 Used in legacy pipelines or very complex logic
