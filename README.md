@@ -45,4 +45,4 @@ Make pipelines readable and predictable
 ##
 What Is Scripted Pipeline ?
 
-Scripted Pipeline is pure Groovy scripting.
+Scripted Pipeline is pure Groovy scripting.Full programming control with no safety rails
