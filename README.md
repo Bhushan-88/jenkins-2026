@@ -41,3 +41,4 @@ Declarative Pipeline is a structured, opinionated syntax introduced to:
 Reduce complexity
 Enforce best practices
 Make pipelines readable and predictable
+
