@@ -1,5 +1,5 @@
 node {
     stage('pull') {
-        echo ''
+        echo 'pull is successful'
     }
 }
