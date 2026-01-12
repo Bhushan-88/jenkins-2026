@@ -9,7 +9,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'mvn clean package'
-                sh''
+                sh'rm -rf ~/.m2/repository/org/apache/maven/plugins/maven-war-plugin
+'
             }
         }
         stage('test') {
