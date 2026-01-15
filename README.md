@@ -32,7 +32,7 @@ pipeline plugin
 blue ocean
 
 sonarQube scanner 
-Sonar Quality 
+Sonar Quality gates
 ## Pipeline
 A Jenkins Pipeline is a Pipeline-as-Code implementation that defines the entire CI/CD workflow in code (Groovy DSL) instead of UI clicks.
 
