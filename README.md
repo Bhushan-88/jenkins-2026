@@ -32,7 +32,7 @@ pipeline plugin
 blue ocean
 
 sonar 
-## PipelineQ
+## Pipeline
 A Jenkins Pipeline is a Pipeline-as-Code implementation that defines the entire CI/CD workflow in code (Groovy DSL) instead of UI clicks.
 
 ##
