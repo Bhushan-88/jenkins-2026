@@ -19,7 +19,8 @@ sudo apt install jenkins
 
 root@ubuntu:~# systemctl status jenkins.service
 root@ubuntu:~# cat /var/lib/jenkins/secrets/initialAdminPassword
-# configure maven Manage Jenkins → Tools
+
+# configure maven Manage Jenkins → Tools → Maven installations
 Scroll to Maven installations
 Click Add Maven
 Fill exactly:
