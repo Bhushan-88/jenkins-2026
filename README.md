@@ -25,13 +25,9 @@ Scroll to Maven installations
 Click Add Maven
 
 Fill exactly:
-
 Name: maven-3.9.1 ← must match Jenkinsfile
-
 MAVEN_HOME: /opt/apache-maven-3.9.1
-
 Install automatically: ❌ unchecked
-
 Save
 ```
 
