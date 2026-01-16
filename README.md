@@ -86,3 +86,6 @@ Run code quality analysis from Jenkins pipeline
 See results in SonarQube dashboard
 
 ## 2. SonarQube Architecture (Simple)
+Developer → GitHub → Jenkins → SonarQube
+                              ↓
+                        Quality Gate
