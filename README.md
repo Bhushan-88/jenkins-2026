@@ -39,8 +39,7 @@ Sonar Quality gates
 ## Pipeline
 A Jenkins Pipeline is a Pipeline-as-Code implementation that defines the entire CI/CD workflow in code (Groovy DSL) instead of UI clicks.
 
-##
-What Is Declarative Pipeline ?
+## What Is Declarative Pipeline ?
 
 Declarative Pipeline is a structured, opinionated syntax introduced to:
 
@@ -48,8 +47,7 @@ Reduce complexity
 Enforce best practices
 Make pipelines readable and predictable
 
-##
-What Is Scripted Pipeline ?
+## What Is Scripted Pipeline ?
 
 Scripted Pipeline is pure Groovy scripting.Full programming control with no safety rails
 
