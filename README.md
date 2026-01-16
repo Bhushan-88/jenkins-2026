@@ -89,3 +89,4 @@ See results in SonarQube dashboard
 Developer → GitHub → Jenkins → SonarQube
                               ↓
                         Quality Gate
+
