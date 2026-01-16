@@ -21,7 +21,7 @@ pipeline {
                 sh '/opt/apache-maven-3.9.1/bin/mvn package'
             }
         }
-/()
+/*()
         stage('test') {
             steps{
                 echo 'test is success'
