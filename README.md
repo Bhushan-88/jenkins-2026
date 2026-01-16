@@ -95,9 +95,7 @@ Jenkins sends source code to SonarQube
 SonarQube analyzes:
 
 Bugs
-
 Code smells
-
 Vulnerabilities
 Duplications
 Quality Gate decides PASS / FAIL
