@@ -4,6 +4,7 @@ pipeline {
     tools {
         maven 'maven-3.9.1'
     }
+    
     stages {
         stage('pull') {
             steps {
