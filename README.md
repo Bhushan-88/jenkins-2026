@@ -77,14 +77,11 @@ Declarative pipeline is a structured, opinionated syntax designed for readabilit
 
 --------------------------------------------------------------------------------------
 
-#PART 1: SonarQube Configuration (Hands-On)
-1. What We Are Doing (High-Level)
+# PART 1: SonarQube Configuration (Hands-On)
 
 You will:
-
 Install SonarQube server
-
 Configure SonarQube in Jenkins
-
 Run code quality analysis from Jenkins pipeline
 See results in SonarQube dashboard
+
