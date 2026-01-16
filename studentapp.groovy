@@ -4,33 +4,29 @@ pipeline {
     tools {
         maven 'maven-3.9.1'
     }
-    
+
     stages {
-        stage('pull') {
+        stage('Pull') {
             steps {
                 git 'https://github.com/Bhushan-88/studentapp-ui.git'
             }
         }
+
         stage('Build') {
             steps {
                 sh 'mvn clean package'
             }
         }
 
-/*        stage('build') {
+        stage('Test') {
             steps {
-                sh '/opt/apache-maven-3.9.1/bin/mvn package'
+                echo 'Test is successful'
             }
         }
-*/
-        stage('test') {
-            steps{
-                echo 'test is success'
-            }
-        }
-        stage('deploy') {
-            steps{
-                echo 'deploy is successful'
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploy is successful'
             }
         }
     }
