@@ -75,3 +75,16 @@ Used in legacy pipelines or very complex logic
 Answer:
 Declarative pipeline is a structured, opinionated syntax designed for readability, validation, and best practices, whereas Scripted pipeline is a flexible Groovy-based approach offering full control but higher complexity. In modern CI/CD, Declarative is preferred, with Scripted used only for advanced logic.
 
+--------------------------------------------------------------------------------------
+
+#PART 1: SonarQube Configuration (Hands-On)
+1. What We Are Doing (High-Level)
+
+You will:
+
+Install SonarQube server
+
+Configure SonarQube in Jenkins
+
+Run code quality analysis from Jenkins pipeline
+See results in SonarQube dashboard
