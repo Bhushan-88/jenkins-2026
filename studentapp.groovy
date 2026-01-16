@@ -8,7 +8,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh '/opt/apache-maven-3.9.1/bin/mvn clean package'
+                sh '/opt/apache-maven-3.9.1/bin/mvn package'
             }
         }
         stage('test') {
