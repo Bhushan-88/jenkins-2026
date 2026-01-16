@@ -10,7 +10,7 @@ pipeline {
                 git 'https://github.com/Bhushan-88/studentapp-ui.git'
             }
         }
-*        stage('build') {
+        stage('build') {
             steps {
                 sh '/opt/apache-maven-3.9.1/bin/mvn package'
             }
