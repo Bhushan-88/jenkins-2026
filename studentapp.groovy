@@ -10,6 +10,11 @@ pipeline {
                 git 'https://github.com/Bhushan-88/studentapp-ui.git'
             }
         }
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
 
         stage('build') {
             steps {
