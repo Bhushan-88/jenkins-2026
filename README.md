@@ -19,7 +19,7 @@ sudo apt install jenkins
 
 root@ubuntu:~# systemctl status jenkins.service
 root@ubuntu:~# cat /var/lib/jenkins/secrets/initialAdminPassword
-# con
+# configure maven 
 ```
 
 ## jenkins plugin 
