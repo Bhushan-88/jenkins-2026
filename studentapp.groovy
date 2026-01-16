@@ -8,8 +8,6 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh'rm -rf ~/.m2/repository/org/apache/maven/plugins/maven-war-plugin'
-                sh 'rm -rf ~/.m2/repository/com/thoughtworks/xstream'
                 sh '/opt/apache-maven-3.9.1/bin/mvn clean package'
             }
         }
