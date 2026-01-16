@@ -23,7 +23,6 @@ root@ubuntu:~# cat /var/lib/jenkins/secrets/initialAdminPassword
 Scroll to Maven installations
 
 Click Add Maven
-
 Fill exactly:
 Name: maven-3.9.1 ← must match Jenkinsfile
 MAVEN_HOME: /opt/apache-maven-3.9.1
