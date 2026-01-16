@@ -90,3 +90,32 @@ Developer → GitHub → Jenkins → SonarQube
                               ↓
                         Quality Gate
 
+
+Jenkins sends source code to SonarQube
+SonarQube analyzes:
+
+Bugs
+Code smells
+Vulnerabilities
+Duplications
+Quality Gate decides PASS / FAIL
+
+## 3. Install SonarQube Server (Community Edition)
+create new instance/server
+Prerequisites
+Java 17 (SonarQube requires Java 17)
+Minimum 2 GB RAM (4 GB recommended)
+SonarQube server Java version is independent of your project Java 11
+
+```bash
+Install Java 17
+apt install -y java-17-openjdk
+java -version
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.1.zip
+cd /opt
+unzip ~/sonarqube-7.9.1.zip
+mv sonarqube-7.9.1 sonar
+
+
+
+```
