@@ -108,6 +108,7 @@ Minimum 2 GB RAM (4 GB recommended)
 SonarQube server Java version is independent of your project Java 11
 
 ```bash
+# STEP 1: CHECK JAVA VERSION (CRITICAL)
 Install Java 11
 apt install -y java-11-openjdk
 java -version
