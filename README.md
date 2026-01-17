@@ -117,7 +117,7 @@ cd /opt
 unzip ~/sonarqube-9.9.3.79811.zip
 mv sonarqube-9.9.3.79811 sonar
 
-
+# STEP 2: DO NOT RUN SONARQUBE AS ROOT (VERY IMPORTANT)
 sudo useradd sonar
 sudo passwd sonar
 add sudo sonar
