@@ -114,7 +114,7 @@ java -version
 sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.3.79811.zip
 cd /opt
 unzip ~/sonarqube-9.9.3.79811.zip
-mv sonarqube-7.9.1 sonar
+mv sonarqube-9.9.3.79811 sonar
 
 
 
