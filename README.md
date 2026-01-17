@@ -108,8 +108,8 @@ Minimum 2 GB RAM (4 GB recommended)
 SonarQube server Java version is independent of your project Java 11
 
 ```bash
-Install Java 17
-apt install -y java-17-openjdk
+Install Java 11
+apt install -y java-11-openjdk
 java -version
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.1.zip
 cd /opt
