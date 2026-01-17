@@ -139,6 +139,7 @@ cd /opt/sonarqube-9.9.3.79811/bin/linux-x86-64
 ./sonar.sh status
 
 # STEP 5: VERIFY PORT 9000
+ss -lntp | grep 9000
 
 #STEP 6: ACCESS UI
 http://<server-ip>:9000
