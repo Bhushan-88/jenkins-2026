@@ -116,6 +116,9 @@ cd /opt
 unzip ~/sonarqube-9.9.3.79811.zip
 mv sonarqube-9.9.3.79811 sonar
 
+sudo useradd sonar
+sudo passwd sonar
+add sudo 
 sysctl vm.max_map_count
 sudo sysctl -w vm.max_map_count=262144
 echo "vm.max_map_count=262144" | sudo tee -a /etc/sysctl.conf
