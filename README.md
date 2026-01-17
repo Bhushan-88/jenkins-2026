@@ -119,6 +119,7 @@ mv sonarqube-9.9.3.79811 sonar
 sudo useradd sonar
 sudo passwd sonar
 add sudo sonar
+sudo chown -R sonar:sonar /opt/sonarqube-9.9.3.79811
 
 
 sysctl vm.max_map_count
