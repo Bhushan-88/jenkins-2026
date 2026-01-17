@@ -124,7 +124,7 @@ add sudo sonar
 sudo chown -R sonar:sonar /opt/sonarqube-9.9.3.79811
 su - sonar
 
-
+#
 sysctl vm.max_map_count
 sudo sysctl -w vm.max_map_count=262144
 echo "vm.max_map_count=262144" | sudo tee -a /etc/sysctl.conf
