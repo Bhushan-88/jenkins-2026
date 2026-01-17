@@ -127,8 +127,7 @@ su - sonar
 # STEP 3: FIX KERNEL PARAMETER (MOST COMMON FAILURE)
 Elasticsearch (inside SonarQube) will not start if this is not set.
 #Check current value .If value is less than 262144, SonarQube will fail.
-
-sysctl vm.max_map_count #Fix it
+sysctl vm.max_map_count 
 sudo sysctl -w vm.max_map_count=262144
 echo "vm.max_map_count=262144" | sudo tee -a /etc/sysctl.conf
    13  sudo sysctl -p
