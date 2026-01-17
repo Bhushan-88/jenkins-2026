@@ -112,7 +112,6 @@ Install Java 11
 apt install -y java-11-openjdk
 java -version
 sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.3.79811.zip
-wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.1.zip
 cd /opt
 unzip ~/sonarqube-7.9.1.zip
 mv sonarqube-7.9.1 sonar
