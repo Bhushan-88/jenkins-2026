@@ -132,4 +132,6 @@ echo "vm.max_map_count=262144" | sudo tee -a /etc/sysctl.conf
 
 cd /opt/sonarqube-9.9.3.79811/bin/linux-x86-64
 ./sonar.sh start
+./sonar.sh status
+
 ```
