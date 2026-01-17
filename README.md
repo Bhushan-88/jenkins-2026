@@ -142,5 +142,7 @@ cd /opt/sonarqube-9.9.3.79811/bin/linux-x86-64
 
 #STEP 6: ACCESS UI
 http://<server-ip>:9000
+Login:
+admin / admin
 
 ```
