@@ -118,5 +118,8 @@ mv sonarqube-9.9.3.79811 sonar
 
 sysctl vm.max_map_count
 sudo sysctl -w vm.max_map_count=262144
+echo "vm.max_map_count=262144" | sudo tee -a /etc/sysctl.conf
+   13  sudo sysctl -p
+   14  ulimit -n
 
 ```
