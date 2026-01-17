@@ -128,7 +128,7 @@ su - sonar
 Elasticsearch (inside SonarQube) will not start if this is not set.
 #Check current value .If value is less than 262144, SonarQube will fail.
 sysctl vm.max_map_count 
-sudo sysctl -w vm.max_map_count=262144
+sudo sysctl -w vm.max_map_count=262144 #FIX 
 echo "vm.max_map_count=262144" | sudo tee -a /etc/sysctl.conf
    13  sudo sysctl -p
    14  ulimit -n
