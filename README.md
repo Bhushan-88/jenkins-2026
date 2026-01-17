@@ -117,6 +117,7 @@ cd /opt
 unzip ~/sonarqube-9.9.3.79811.zip
 mv sonarqube-9.9.3.79811 sonar
 
+
 sudo useradd sonar
 sudo passwd sonar
 add sudo sonar
