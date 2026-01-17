@@ -43,7 +43,7 @@ mysql>
 ### Install Sonarqube
 ```shell
 yum install unzip -y
-wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.1.zip
+wget  sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.3.79811.zip
 cd /opt
 unzip ~/sonarqube-7.9.1.zip
 mv sonarqube-7.9.1 sonar
