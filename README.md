@@ -110,7 +110,7 @@ SonarQube server Java version is independent of your project Java 11
 ```bash
 # STEP 1: CHECK JAVA VERSION (CRITICAL)
 Install Java 11
-apt install -y java-11-openjdk
+apt install -y java-17-openjdk
 java -version
 sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.3.79811.zip
 cd /opt
