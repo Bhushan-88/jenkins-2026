@@ -138,6 +138,8 @@ cd /opt/sonarqube-9.9.3.79811/bin/linux-x86-64
 ./sonar.sh start
 ./sonar.sh status
 
+tail -f /opt/sonar/logs/sonar.log
+
 # STEP 5: VERIFY PORT 9000
 ss -lntp | grep 9000
 
