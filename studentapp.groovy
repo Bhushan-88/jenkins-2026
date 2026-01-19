@@ -36,7 +36,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonar-server', credentialsId: 'sonar-token') {
                     sh '/opt/apache-maven-3.9.1/bin/mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-                      -Dsonar.projectKey=student-app \ '
+                      -Dsonar.projectKey=student-app '
                 }
             }
         }
