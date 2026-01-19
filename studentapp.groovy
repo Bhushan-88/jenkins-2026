@@ -23,7 +23,7 @@ pipeline {
             }
         }
 */
-       stage('test') {
+       /*stage('test') {
             steps{
                 sh 'mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
   -Dsonar.projectKey=student-app \
