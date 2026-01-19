@@ -32,6 +32,7 @@ pipeline {
             }
         }
 */
+
         stage('deploy') {
             steps{
                 echo 'deploy is successful'
