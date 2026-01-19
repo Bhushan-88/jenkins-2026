@@ -31,7 +31,7 @@ pipeline {
   -Dsonar.login=sqp_c9d3a245c54ddda139cd7864b873de82c66db991'
             }
         }
-        /*stage('test') {
+        */
         stage
 
         stage('deploy') {
