@@ -121,7 +121,7 @@ mv sonarqube-9.9.3.79811 sonar
 sudo useradd sonar
 sudo passwd sonar
 add sudo sonar
-sudo chown -R sonar:sonar /opt/sonarqube-9.9.3.79811
+sudo chown -R sonar:sonar /opt/sonarqube-9.9.3.7981
 su - sonar
 
 # STEP 3: FIX KERNEL PARAMETER (MOST COMMON FAILURE)
