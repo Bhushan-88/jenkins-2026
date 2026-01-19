@@ -34,7 +34,7 @@ pipeline {
 */
         stage('test') {
             steps {
-                withSonarQubeEnv(sonar-server credentialsId: 'sonar-token') {
+                withSonarQubeEnv(sonar-servercredentialsId: 'sonar-token') {
                     sh 'mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
                       -Dsonar.projectKey=student-app \ '
                 }
