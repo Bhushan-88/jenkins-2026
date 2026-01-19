@@ -102,7 +102,7 @@ sudo systemctl start sonarqube
 sudo systemctl status sonarqube
 tail -f /opt/sonarqube/logs/sonar.log
 
-# STEP 5: START SONARQUBE
+# STEP 6: START SONARQUBE
 cd /opt/sonarqube-9.9.3.79811/bin/linux-x86-64
 ./sonar.sh start
 ./sonar.sh status
