@@ -160,7 +160,7 @@ GRANT ALL PRIVILEGES ON DATABASE sonarqube TO sonar;
 
 http://<server-ip>:9000
 Goto project -->create manualy project -->genrate token 
-mvn clean verify sonar:sonar \
+mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
   -Dsonar.projectKey=student-app \
   -Dsonar.host.url=http://10.123.249.62:9000 \
   -Dsonar.login=sqp_c9d3a245c54ddda139cd7864b873de82c66db991
