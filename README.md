@@ -115,7 +115,7 @@ java -version
 sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.3.79811.zip
 cd /opt
 unzip ~/sonarqube-9.9.3.79811.zip
-mv sonarqube-9.9.3.79811 sonar
+mv sonarqube-9.9.3.79811 sonarube
 
 # STEP 2: DO NOT RUN SONARQUBE AS ROOT (VERY IMPORTANT)
 sudo useradd sonar
