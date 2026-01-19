@@ -159,4 +159,4 @@ GRANT ALL PRIVILEGES ON DATABASE sonarqube TO sonar;
 ```
 
 http://<server-ip>:9000
-Goto project -->create manualy project 
+Goto project -->create manualy project -->genrate token 
