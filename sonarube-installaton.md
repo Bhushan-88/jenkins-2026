@@ -111,7 +111,7 @@ cd /opt/sonarqube-9.9.3.79811/bin/linux-x86-64
 tail -f /opt/sonar/logs/sonar.log
 tail -50 /opt/sonar/logs/es.log
 
-# STEP 5: VERIFY PORT 9000
+# STEP 7: VERIFY PORT 9000
 ss -lntp | grep 9000
 
 #STEP 6: ACCESS UI
