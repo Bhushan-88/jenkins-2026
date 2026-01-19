@@ -114,7 +114,7 @@ tail -50 /opt/sonar/logs/es.log
 # STEP 7: VERIFY PORT 9000
 ss -lntp | grep 9000
 
-#STEP 6: ACCESS UI
+#STEP 8: ACCESS UI
 http://<server-ip>:9000
 Login:
 admin / admin
