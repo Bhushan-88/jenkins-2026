@@ -25,7 +25,7 @@ pipeline {
 */
         stage('test') {
             steps{
-                echo 'test is success'
+                sh 'test is success'
             }
         }
         stage('deploy') {
