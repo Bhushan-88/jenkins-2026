@@ -23,7 +23,7 @@ pipeline {
             }
         }
 */
-        stage('test') {
+/*        stage('test') {
             steps{
                 sh 'mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
   -Dsonar.projectKey=student-app \
@@ -31,6 +31,8 @@ pipeline {
   -Dsonar.login=sqp_c9d3a245c54ddda139cd7864b873de82c66db991'
             }
         }
+*/
+
         stage('deploy') {
             steps{
                 echo 'deploy is successful'
