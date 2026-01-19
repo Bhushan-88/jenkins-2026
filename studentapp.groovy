@@ -32,7 +32,7 @@ pipeline {
             }
         }
 */
-        stage('test') {
+        stage('Testing SonarQube Analysis') {
             steps {
             // This submits the report to SonarQube
                 withSonarQubeEnv(installationName: 'sonar-server', credentialsId: 'sonar-token') {
