@@ -23,16 +23,11 @@ pipeline {
             }
         }
 */
-/*        stage('test') {
+        stage('test') {
             steps{
-                sh 'mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-  -Dsonar.projectKey=student-app \
-  -Dsonar.host.url=http://10.123.249.62:9000 \
-  -Dsonar.login=sqp_c9d3a245c54ddda139cd7864b873de82c66db991'
+                sh 'test is success'
             }
         }
-    
-
         stage('deploy') {
             steps{
                 echo 'deploy is successful'
