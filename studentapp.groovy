@@ -43,7 +43,7 @@ pipeline {
 
         stage('deploy') {
             steps{
-                echo 'Quality Gate passed. Deploying application...'
+                echo 'Quality Gate passed. Deploying application....'
             }
         }
     }
