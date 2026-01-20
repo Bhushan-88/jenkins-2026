@@ -43,15 +43,14 @@ pipeline {
 
         stage('Quality Gate') {
             steps {
-                timeout(time: 1, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
+                waitForQualityGate abortPipeline: true
                 }
             }
-        }
+        
 
         stage('deploy') {
             steps{
-                echo 'deploy is successful'
+                echo 'Quality Gate passed. Deploying application...'
             }
         }
     }
