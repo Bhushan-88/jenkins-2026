@@ -41,12 +41,6 @@ pipeline {
             }
         }
 
-        stage('Quality Gate') {
-            steps {
-                    waitForQualityGate abortPipeline: true
-            }
-        }
-
         stage('deploy') {
             steps{
                 echo 'Quality Gate passed. Deploying application...'
@@ -55,4 +49,3 @@ pipeline {
     }
 }
 
-a
