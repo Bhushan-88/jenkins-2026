@@ -45,7 +45,7 @@ pipeline {
             steps{
                 // Ensure the 'Deploy to Container' plugin is installed
                 echo 'Quality Gate passed. Deploying application....'
-                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-cred', path: '', url: 'http://10.123.249.93:8080/')], contextPath: 'studentapp', war: '**/*.war'
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-cred', path: '', url: 'http://10.123.249.93:8080/')], contextPath: '/var/lib/jenkins/workspace/studentapp/target/', war: '**/*.war'
             }
         }
     }
