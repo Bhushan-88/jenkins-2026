@@ -44,6 +44,7 @@ pipeline {
         stage('deploy') {
             steps{
                 echo 'Quality Gate passed. Deploying application....'
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-cred', path: '', url: 'http://10.123.249.93:8080/')], contextPath: '/', war: '**/*.war'
             }
         }
     }
