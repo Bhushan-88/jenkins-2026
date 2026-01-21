@@ -6,7 +6,7 @@ Jenkins is an open source continuous integration/continuous delivery and deploym
 # Jenkins Installation
 ```bash
 sudo apt update
-sudo apt install openjdk-11-jdk
+sudo apt install openjdk-17-jdk
 java -version
 
 sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
@@ -19,6 +19,28 @@ sudo apt install jenkins
 
 root@ubuntu:~# systemctl status jenkins.service
 root@ubuntu:~# cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+# Install Maven tool for Build
+```bash
+#1. Verify Java 11 Installation (Required for Maven 3.9.1)
+sudo apt install openjdk-11-jdk
+java -version
+# 2. Ensure Java 11 Is the Default JVM
+sudo alternatives --config java
+# 3. Install Apache Maven 3.9.1 (Manual – Recommended)
+cd /opt
+sudo wget https://downloads.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.tar.gz
+Extract
+sudo tar -xzf apache-maven-3.9.1-bin.tar.gz
+sudo mv apache-maven-3.9.1 maven
+
+# 4. Configure Maven Environment Variables
+sudo vi /etc/profile 
+Add:
+export PATH=$PATH:'/opt/apache-maven-3.9.1/bin'
+Apply:
+source /etc/profile
+mvn -version
 
 # configure maven Manage Jenkins → Tools → Maven installations
 Scroll to Maven installations
@@ -32,9 +54,13 @@ Save
 
 ## jenkins plugin 
 SSH Build Agents plugin -- Allows to launch agents over SSH, using a Java implementation of the SSH protocol.
+
 Git plugin - This plugin integrates Git with Jenkins.
 
 Email Extension Plugin
+--------------------------------------------------------------
+## Triggers
+Trigger builds remotely (e.g., from scripts)
 
 Build Authorization Token Root -->Lets build and related REST build triggers be accessed even when anonymous users cannot see Jenkins.
 
@@ -43,9 +69,8 @@ http://10.224.82.79:8080/buildByToken/build?job=node01&token=mytoken
 
 pipeline plugin
 blue ocean
+-----------------------------------------------------------------------------
 
-sonarQube scanner 
-Sonar Quality gates
 ## Pipeline
 A Jenkins Pipeline is a Pipeline-as-Code implementation that defines the entire CI/CD workflow in code (Groovy DSL) instead of UI clicks.
 
@@ -69,7 +94,7 @@ Complex
 Harder to maintain
 Used in legacy pipelines or very complex logic
 
--------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 ## Q: Difference between Declarative and Scripted pipeline?
 
 Answer:
@@ -77,77 +102,121 @@ Declarative pipeline is a structured, opinionated syntax designed for readabilit
 
 --------------------------------------------------------------------------------------
 
-# PART 1: SonarQube Configuration (Hands-On)
+# Create Sonarube server
 
-You will:
-Install SonarQube server
-Configure SonarQube in Jenkins
-Run code quality analysis from Jenkins pipeline
-See results in SonarQube dashboard
+# SonarQube integation ,Jenkins Side Requirement (MANDATORY) plugin
+sonarQube scanner 
+Sonar Quality gates
 
-## 2. SonarQube Architecture (Simple)
-Developer → GitHub → Jenkins → SonarQube
-                              ↓
-                        Quality Gate
+Goto Sonarube project -->create manualy project -->genrate token -->copy token
+```bash
+#paste /opt/studentapp-ui for manual testing then add pipeline
+mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+  -Dsonar.projectKey=student-app \
+  -Dsonar.host.url=http://10.123.249.62:9000 \
+  -Dsonar.login=sqp_c9d3a245c54ddda139cd7864b873de82c66db991
+```
+## if you want hide secrets from pipeline like sonar-server hostname secret token follow this steps:
+## store sonarube cred in jenkins using sonarube token first 
+manage jenkins ->Configure global settings and paths ->Add SonarQube servers
 
+Use Pipeline Syntax generator -->withSonarQubeEnv: Prepare SonarQube Scanner environment -->select Server authentication token(secret sonar token) -->generate
+output : 
+withSonarQubeEnv(credentialsId: 'sonar-token') {
+    // some block
+}
+EX:--withSonarQubeEnv(installationName: 'sonar-server', credentialsId: 'sonar-token') {
+                    sh 'mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=student-app'
+                }
 
-Jenkins sends source code to SonarQube
-SonarQube analyzes:
+## 1. What Is a SonarQube Webhook?
 
-Bugs
-Code smells
-Vulnerabilities
-Duplications
-Quality Gate decides PASS / FAIL
+A SonarQube webhook is a mechanism that allows SonarQube to notify an external system (e.g., Jenkins) when a code analysis is completed.
 
-## 3. Install SonarQube Server (Community Edition)
-create new instance/server
-Prerequisites
-Java 17 (SonarQube requires Java 17)
-Minimum 2 GB RAM (4 GB recommended)
-SonarQube server Java version is independent of your project Java 11
+In practice:
+SonarQube finishes analysis
+Quality Gate is evaluated
+SonarQube sends an HTTP POST request to a configured URL
+Jenkins (or another system) receives the result and acts on it
+
+## 2. Why Webhooks Are Important (Real CI/CD Use)
+
+Without webhook:
+Jenkins must poll SonarQube repeatedly
+Pipeline waits blindly
+With webhook:
+Jenkins is instantly notified
+Pipeline can fail or pass automatically based on Quality Gate
+This is the recommended production approach.
+
+Step 1: Login to SonarQube
+Administration → Configuration → Webhooks
+Step 2: Navigate to Webhooks
+name:-jenkins-quality-gate
+url:-http://<jenkins-ip>:8080/sonarqube-webhook/
+
+## if you want to run this pipeline on the bases of quality check if quality gate fail stop pipeline
+Use Pipeline Syntax generator -->Select waitForQualityGate: Wait for SonarQube analysis to be completed and return quality gate status -->generate
+
+## To deploy your artifact (WAR file) to a Tomcat server, you need to do three things:
+
+Configure Tomcat to accept remote deployments.
+Install the "Deploy to Container" plugin in Jenkins.
+Update your Pipeline with the deploy stage.
 
 ```bash
-# STEP 1: CHECK JAVA VERSION (CRITICAL)
-Install Java 17
-apt install -y java-17-openjdk
-java -version
-sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.3.79811.zip
+# Step 1: Configure Tomcat User (On Tomcat Server)
 cd /opt
-unzip ~/sonarqube-9.9.3.79811.zip
-mv sonarqube-9.9.3.79811 sonarube
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.113/bin/apache-tomcat-9.0.113.tar.gz
+tar -xvf  apache-tomcat-9.0.113.tar.gz apache-tomcat-9.0.113/
+mv apache-tomcat-9.0.113 tomcat
+sudo vim /opt/tomcat/conf/tomcat-users.xml
+# Add the following lines inside the <tomcat-users> tags:
+ <role rolename="manager-gui"/>
+ <role rolename="manager-script"/>
+ <role rolename="manager-jmx"/>
+ <role rolename="manager-status"/>
+ <role rolename="admin-gui"/>
+ <user username="deployer" password="deployer@123" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-gui"/>
 
-# STEP 2: DO NOT RUN SONARQUBE AS ROOT (VERY IMPORTANT)
-sudo useradd sonar
-sudo passwd sonar
-add sudo sona
-sudo chown -R sonar:sonar /opt/sonarqube-9.9.3.79811
-su - sonar
+#find and comment this line 
+vim /opt/tomcat/webapps/manager/META-INF/context.xml
+<!--
+  <Valve className="org.apache.catalina.valves.RemoteCIDRValve"
+        allow="127.0.0.0/8,::1/128" />
+-->
 
-# STEP 3: FIX KERNEL PARAMETER (MOST COMMON FAILURE)
-Elasticsearch (inside SonarQube) will not start if this is not set.
-#Check current value .If value is less than 262144, SonarQube will fail.
-sysctl vm.max_map_count 
-sudo sysctl -w vm.max_map_count=262144 #Fix it 
-echo "vm.max_map_count=262144" | sudo tee -a /etc/sysctl.conf #Make it permanent:
-   13  sudo sysctl -p
-   14  ulimit -n
+# start tomcat service 
+cd /opt/tomcat/bin
+./catlina.sh start
+http://10.123.249.93:8080
+login with credential for check
 
-# STEP 4: START SONARQUBE
-cd /opt/sonarqube-9.9.3.79811/bin/linux-x86-64
-./sonar.sh start
-./sonar.sh status
+# Step 2: Install Jenkins Plugin
+Go to Manage Jenkins > Plugins > Available Plugins.
+Search for "Deploy to Container".
+Install it and restart Jenkins if required.
 
-#standard SonarQube troubleshooting
-tail -f /opt/sonar/logs/sonar.log
-tail -50 /opt/sonar/logs/es.log
+# Step 3: Add Credentials in Jenkins
+Go to Manage Jenkins > Credentials > System > Global credentials.
+Click Add Credentials.
+Kind: Username with password.
+Username: deployer (from Step 1).
+Password: deployer@123.
+ID: tomcat-cred (We will use this ID in the pipeline).
+Click Create.
 
-# STEP 5: VERIFY PORT 9000
-ss -lntp | grep 9000
 
-#STEP 6: ACCESS UI
-http://<server-ip>:9000
-Login:
-admin / admin
+# Step 4: Add Credentials in Jenkins
+Manage Jenkins ->Credentials ->System-> Global credentials ->add cred
+Use Pipeline Syntax generator -->find-->deploy: Deploy war/ear to a container -->add war= **/*.war -->add Context path= / --> add Containers ->select tomcat 9 ->select tomcat credentials and add tomcat URL http://10.123.249.93:8080/ -->Generate Pipeline Script
+
+Output:- add in pipeline script (studentapp.groovy)
+
+deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-cred', path: '', url: 'http://10.123.249.93:8080/')], contextPath: '/', war: '**/*.war'
+
+Update your Pipeline with the deploy stage.
 
 ```
+# how u can assign ssl certificate to jenkins ?
+
