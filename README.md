@@ -218,5 +218,46 @@ deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomc
 Update your Pipeline with the deploy stage.
 
 ```
+------------------------------------------------------------------------------------------
+## Install seed jenkins plugin
+
+A Seed Job is a Jenkins job that automatically creates other Jenkins jobs using code (Groovy script). This is the "Infrastructure as Code" way to manage Jenkins, so you don't have to manually click "New Item" for every microservice.
+
+```bash
+
+To do this, we use the Seed jenkins (optional Job DSL Plugin.)
+
+Step 1: Install the Plugin
+Go to Manage Jenkins > Plugins > Available Plugins.
+Search for "Seed jenkins".
+Install it and restart Jenkins if necessary.
+
+Step 2: Create the DSL Script
+
+Step 3: Configure the Seed Job in Jenkins
+Dashboard > New Item.
+Name: My-Seed-Job.
+Select Freestyle project (Seed jobs are usually freestyle) ->Build steps ->process job DSLs->use the provided DSL script and paste:
+job('my-first-job') {
+    steps {
+        shell('echo HELLO WORLD!')
+    }
+}
+
+## Install Authorize project plugin 
+
+# If you don't configure the Authorize Project plugin, Jenkins doesn't know who is running the script, so it blocks it by default until an Admin approves it.
+How to fix the "Script Approval" issue (Using the Plugin)
+
+```bash
+Go to Manage Jenkins > Security > Global Security.
+Scroll down to Access Control for Builds.
+Click Add and select Run as User who Triggered Build (or "Project default Build Authorization").
+Click Save.
+
+Now run seed-job afte that we can see it will created new job (my-first-job)
+
+
+
 # how u can assign ssl certificate to jenkins ?
 
