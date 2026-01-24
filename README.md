@@ -263,6 +263,6 @@ steps :
 add git url and credentials in job ->got build steps ->select Look on Filesystem and enter path <seed-job/seed_job.groovy>
 
 ```
-
+---------------------------------------------------------------------------------------
 # how u can assign ssl certificate to jenkins ?
 
