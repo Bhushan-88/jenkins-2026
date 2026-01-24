@@ -263,7 +263,7 @@ steps :
 add git url and credentials in job ->got build steps ->select Look on Filesystem and enter path <seed-job/seed_job.groovy>
 
 ```
-## How to take backup using seed job 
+## How to take backup of  seed job 
 
 
 # how u can assign ssl certificate to jenkins ?
