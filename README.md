@@ -232,9 +232,8 @@ Go to Manage Jenkins > Plugins > Available Plugins.
 Search for "Seed jenkins".
 Install it and restart Jenkins if necessary.
 
-Step 2: Create the DSL Script
-
-Step 3: Configure the Seed Job in Jenkins
+#Create the DSL Script
+Step 2: Configure the Seed Job in Jenkins
 Dashboard > New Item.
 Name: My-Seed-Job.
 Select Freestyle project (Seed jobs are usually freestyle) ->Build steps ->process job DSLs->use the provided DSL script and paste:
@@ -243,7 +242,6 @@ job('my-first-job') {
         shell('echo HELLO WORLD!')
     }
 }
-
 ## Install Authorize project plugin 
 
 # If you don't configure the Authorize Project plugin, Jenkins doesn't know who is running the script, so it blocks it by default until an Admin approves it.
@@ -257,7 +255,14 @@ Click Save.
 
 Now run seed-job afte that we can see it will created new job (my-first-job)
 
+# instead of provided DSLs job we can pass DSL job file from git repo
+create dir in repo 
+seed-job/seed_job.groovy
 
+steps :
+add git url and credentials in job ->got build steps ->select Look on Filesystem and enter path <seed-job/seed_job.groovy>
+
+```
 
 # how u can assign ssl certificate to jenkins ?
 
