@@ -264,5 +264,8 @@ add git url and credentials in job ->got build steps ->select Look on Filesystem
 
 ```
 ---------------------------------------------------------------------------------------
+
+
+
 # how u can assign ssl certificate to jenkins ?
 
