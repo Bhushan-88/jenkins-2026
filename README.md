@@ -268,5 +268,7 @@ add git url and credentials in job ->got build steps ->select Look on Filesystem
 sudo mkdir -p /backup/jenkins-thinbackup
 sudo chown -R jenkins:jenkins /backup/jenkins-thinbackup
 
+
+
 # how u can assign ssl certificate to jenkins ?
 
