@@ -271,7 +271,7 @@ Using ThinBackup Plugin (Recommended for Regular Backups)
 1.Install: Go to Manage Jenkins > Plugins > Install "ThinBackup".
 2.Configure: Go to Manage Jenkins > ThinBackup > Settings.
 3.Set Path: Choose a folder (e.g., /backup/jenkins).
-Schedule: Set it to run every night (e.g., 0 0 * * *).
+4.Schedule: Set it to run every night (e.g., 0 0 * * *).
 What it does: It creates a lightweight backup of all your XML configuration files. You can restore this easily on a new server.
 
 ```bash
