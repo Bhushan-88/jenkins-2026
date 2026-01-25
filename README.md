@@ -280,8 +280,7 @@ sudo mkdir -p /backup/jenkins-thinbackup
 sudo chown -R jenkins:jenkins /backup/jenkins-thinbackup
 
 # Configure via Jenkins UI:
-Manage Jenkins → System Configuration
-ThinBackup
+Manage Jenkins → System Configuration → ThinBackup
 Backup directory: /backup/jenkins-thinbackup
 Backup schedule: 0 2 * * * (daily at 2 AM)
 Max # backups: 7
