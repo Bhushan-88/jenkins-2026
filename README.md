@@ -318,7 +318,13 @@ done
 wget http://10.123.249.78:8080/jnlpJars/jenkins-cli.jar #(Make sure you have Java installed to run this .jar file).
 
 #Step 2: Get Your API Token
+To use the CLI safely, do not use your password. Generate an API Token:
 
+Log in to Jenkins.
+
+Click Your Name (top right) > Configure.
+Find API Token > Click Add new Token.
+Name it (e.g., cli-backup) and copy the token string (e.g., 11a2b3c...).
 
 11c1b9d1dbd9e288e01edab4d7ab7338bf
 
