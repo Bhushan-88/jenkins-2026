@@ -313,6 +313,7 @@ done
 
 ```
 
+11c1b9d1dbd9e288e01edab4d7ab7338bf
 
 # how u can assign ssl certificate to jenkins ?
 
