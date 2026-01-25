@@ -264,6 +264,7 @@ add git url and credentials in job ->got build steps ->select Look on Filesystem
 
 ```
 ## How to take backup of Jenkins Job with the help of Thinbackup plugin  
+Using ThinBackup Plugin (Recommended for Regular Backups)
 # Create backup directory with proper permissions
 sudo mkdir -p /backup/jenkins-thinbackup
 sudo chown -R jenkins:jenkins /backup/jenkins-thinbackup
