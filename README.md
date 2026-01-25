@@ -267,10 +267,11 @@ add git url and credentials in job ->got build steps ->select Look on Filesystem
 Using ThinBackup Plugin (Recommended for Regular Backups)
 
 ```bash
-Install ThinBackup Plugin:
+# Install ThinBackup Plugin:
 Go to Manage Jenkins → Plugins → Available
 Search for "ThinBackup"
 Install and restart Jenkins
+
 # Create backup directory with proper permissions
 sudo mkdir -p /backup/jenkins-thinbackup
 sudo chown -R jenkins:jenkins /backup/jenkins-thinbackup
