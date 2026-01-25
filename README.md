@@ -292,6 +292,7 @@ java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ \
   thinBackup backup
 ```
 
+
 # Using the Jenkins CLI (jenkins-cli.jar) is a great way to "script" your backups without installing extra plugins. It allows you to export the configuration of your jobs as XML files from the command line.
 ```bash 
 #Step 1: Download the CLI Tool
