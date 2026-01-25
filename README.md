@@ -326,6 +326,7 @@ Find API Token > Click Add new Token.
 Name it (e.g., cli-backup) and copy the token string (e.g., 11a2b3c...).
 
 #Step 3: Backup a Single Job
+java -jar jenkins-cli.jar -s http://10.123.249.78:8080/ -auth admin:YOUR_API_TOKEN get-job student-app > student-app.xml
 11c1b9d1dbd9e288e01edab4d7ab7338bf
 
 # how u can assign ssl certificate to jenkins ?
