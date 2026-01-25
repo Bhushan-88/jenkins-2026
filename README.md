@@ -294,7 +294,7 @@ java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ \
 ## Method 3: Using Jenkins CLI for Backup
 
 # Download Jenkins CLI jar
-```bash
+```bash 
 sudo wget http://localhost:8080/jnlpJars/jenkins-cli.jar -P /tmp/
 
 # Get list of all jobs
@@ -311,7 +311,7 @@ for job in $(java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ -auth admi
       get-job "$job" > /backup/jenkins/jobs/${job}_config.xml
 done
 
-
+```
 
 
 # how u can assign ssl certificate to jenkins ?
