@@ -317,7 +317,7 @@ done
 #Step 1: Download the CLI Tool
 wget http://10.123.249.78:8080/jnlpJars/jenkins-cli.jar #(Make sure you have Java installed to run this .jar file).
 
-Step 2: Get Your API Token
+#Step 2: Get Your API Token
 
 
 11c1b9d1dbd9e288e01edab4d7ab7338bf
