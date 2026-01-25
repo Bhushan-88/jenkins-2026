@@ -291,25 +291,7 @@ java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ \
   -auth admin:$(sudo cat /var/lib/jenkins/secrets/initialAdminPassword) \
   thinBackup backup
 ```
-## Method 3: Using Jenkins CLI for Backup
 
-# Download Jenkins CLI jar
-```bash 
-sudo wget http://localhost:8080/jnlpJars/jenkins-cli.jar -P /tmp/
-
-# Get list of all jobs
-java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ -auth admin:$(sudo cat /var/lib/jenkins/secrets/initialAdminPassword) list-jobs
-
-# Backup specific job configuration
-JOB_NAME="studentapp-ui"
-java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ -auth admin:$(sudo cat /var/lib/jenkins/secrets/initialAdminPassword) \
-  get-job "$JOB_NAME" > /backup/jenkins/${JOB_NAME}_config.xml
-
-# Backup all jobs
-for job in $(java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ -auth admin:$(sudo cat /var/lib/jenkins/secrets/initialAdminPassword) list-jobs); do
-    java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ -auth admin:$(sudo cat /var/lib/jenkins/secrets/initialAdminPassword) \
-      get-job "$job" > /backup/jenkins/jobs/${job}_config.xml
-done
 
 ```
 ## Using the Jenkins CLI (jenkins-cli.jar) is a great way to "script" your backups without installing extra plugins. It allows you to export the configuration of your jobs as XML files from the command line.
