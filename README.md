@@ -291,6 +291,11 @@ java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ \
   -auth admin:$(sudo cat /var/lib/jenkins/secrets/initialAdminPassword) \
   thinBackup backup
 ```
+## 
+
+
+
+
 
 # how u can assign ssl certificate to jenkins ?
 
