@@ -264,6 +264,8 @@ add git url and credentials in job ->got build steps ->select Look on Filesystem
 
 ```
 ## How to take backup of Jenkins Job with the help of Thinbackup plugin  
+The "ThinBackup" Plugin (For Jenkins Settings)
+If you want to backup everything (not just the pipeline logic, but also your Plugins, Global Tool Configurations, User accounts, and Build History), use the ThinBackup plugin.
 Using ThinBackup Plugin (Recommended for Regular Backups)
 
 ```bash
