@@ -276,6 +276,8 @@ Install and restart Jenkins
 sudo mkdir -p /backup/jenkins-thinbackup
 sudo chown -R jenkins:jenkins /backup/jenkins-thinbackup
 
+Configure via Jenkins UI:
+
 
 
 # how u can assign ssl certificate to jenkins ?
