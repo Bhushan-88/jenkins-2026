@@ -263,7 +263,7 @@ steps :
 add git url and credentials in job ->got build steps ->select Look on Filesystem and enter path <seed-job/seed_job.groovy>
 
 ```
-## How to take backup of Jenkins Job with the help of Thin 
+## How to take backup of Jenkins Job with the help of Thinbackup plugin  
 # Create backup directory with proper permissions
 sudo mkdir -p /backup/jenkins-thinbackup
 sudo chown -R jenkins:jenkins /backup/jenkins-thinbackup
