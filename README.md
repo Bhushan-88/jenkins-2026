@@ -268,6 +268,15 @@ The "ThinBackup" Plugin (For Jenkins Settings)
 If you want to backup everything (not just the pipeline logic, but also your Plugins, Global Tool Configurations, User accounts, and Build History), use the ThinBackup plugin.
 Using ThinBackup Plugin (Recommended for Regular Backups)
 
+Install: Go to Manage Jenkins > Plugins > Install "ThinBackup".
+
+Configure: Go to Manage Jenkins > ThinBackup > Settings.
+
+Set Path: Choose a folder (e.g., /backup/jenkins).
+
+Schedule: Set it to run every night (e.g., 0 0 * * *).
+What it does: It creates a lightweight backup of all your XML configuration files. You can restore this easily on a new server.
+
 ```bash
 # Install ThinBackup Plugin:
 Go to Manage Jenkins → Plugins → Available
