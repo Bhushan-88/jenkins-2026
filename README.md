@@ -312,6 +312,7 @@ for job in $(java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ -auth admi
 done
 
 ```
+## Using the Jenkins CLI (jenkins-cli.jar) is a great way to "script" your backups without installing extra plugins. It allows you to export the configuration of your jobs as XML files from the command line.
 
 11c1b9d1dbd9e288e01edab4d7ab7338bf
 
