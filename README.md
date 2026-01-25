@@ -275,8 +275,6 @@ Using ThinBackup Plugin (Recommended for Regular Backups)
 What it does: It creates a lightweight backup of all your XML configuration files. You can restore this easily on a new server.
 
 ```bash
-Install and restart Jenkins
-
 # Create backup directory with proper permissions
 sudo mkdir -p /backup/jenkins-thinbackup
 sudo chown -R jenkins:jenkins /backup/jenkins-thinbackup
