@@ -314,9 +314,10 @@ done
 ```
 ## Using the Jenkins CLI (jenkins-cli.jar) is a great way to "script" your backups without installing extra plugins. It allows you to export the configuration of your jobs as XML files from the command line.
 ```bash 
-Step 1: Download the CLI Tool
+#Step 1: Download the CLI Tool
 wget http://10.123.249.78:8080/jnlpJars/jenkins-cli.jar #(Make sure you have Java installed to run this .jar file).
 
+Step 2: Get Your API Token
 
 
 11c1b9d1dbd9e288e01edab4d7ab7338bf
