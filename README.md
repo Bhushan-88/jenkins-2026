@@ -285,6 +285,7 @@ Backup directory path: /backup/jenkins-thinbackup
 Backup schedule: 0 2 * * * (daily at 2 AM)
 Max # backups: 7
 Backup build results: ✓ (if you want to backup build artifacts)
+
 Manual backup with ThinBackup:
 # Trigger backup via CLI
 java -jar /tmp/jenkins-cli.jar -s http://localhost:8080/ \
