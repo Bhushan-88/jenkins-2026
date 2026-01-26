@@ -310,7 +310,7 @@ Name it (e.g., cli-backup) and copy the token string (e.g., 11a2b3c...).
 
 #Step 3: Backup a Single Job
 java -jar jenkins-cli.jar -s http://10.123.249.78:8080/ -auth admin:YOUR_API_TOKEN get-job student-app > student-app.xml
-#
+# delete old job 
 # To restore job
 java -jar jenkins-cli.jar -s http://10.123.249.78:8080/ -auth admin:YOUR_API_TOKEN get-job student-app > student-app.xml
 
