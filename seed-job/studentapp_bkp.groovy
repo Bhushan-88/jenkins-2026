@@ -39,7 +39,7 @@
       <submoduleCfg class="empty-list"/>
       <extensions/>
     </scm>
-    <scriptPath>studentapp-bkp.groovy</scriptPath>
+    <scriptPath>studentapp.groovy</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
