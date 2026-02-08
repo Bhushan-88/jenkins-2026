@@ -104,7 +104,7 @@ Declarative pipeline is a structured, opinionated syntax designed for readabilit
 
 # Create Sonarube server
 
-# SonarQube integation ,Jenkins Side Requirement (MANDATORY) plugin
+# SonarQube integation,Jenkins Side Requirement (MANDATORY) plugin
 sonarQube scanner 
 Sonar Quality gates
 
