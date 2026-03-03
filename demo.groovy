@@ -1,1 +1,4 @@
-pipeline 
+pipeline {
+    agent any 
+    
+}
