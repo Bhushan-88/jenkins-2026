@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('pull') {
             steps {
-                git '
+                git 'https://github.com/your-repo.git'}
         }
     }
 }
