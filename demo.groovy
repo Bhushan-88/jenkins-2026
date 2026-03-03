@@ -1,6 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('pull') {}
+        stage('pull') {
+            steps {
+                git '
+        }
     }
 }
