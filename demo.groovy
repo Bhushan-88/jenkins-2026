@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    stages {
+     stages {
         stage('pull') {
             steps {
                 git 'https://github.com/your-repo.git'}
