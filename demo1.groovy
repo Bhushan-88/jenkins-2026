@@ -2,7 +2,8 @@ pipeline {
     agent any
     stages {
         stage{
-            steps (code))
+            steps (code)
+            
         }
     }
 }
