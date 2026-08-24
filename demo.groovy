@@ -23,7 +23,7 @@ pipeline {
         stage("Push to Docker Hub"){
             steps{
                 script{
-                    withCredentials([usernamePassword(credentialsId: "dockerHubCreds"){
+                    withCredentials([usernamePassword(credentialsId: "dockerHubCreds
                     
                     }
                 }  
