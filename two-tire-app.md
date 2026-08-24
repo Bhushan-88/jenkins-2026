@@ -14,4 +14,4 @@ ubuntu@ip-172-31-39-22:~$ sudo chown -R ubuntu jenkins/workspace/two-tire/mysql-
 add dockerhub cred in jenkins credentias
 seect username and password 
 id:dockerHubCreds - and  save
-add in pipeline :withcredentials
+add in pipeline - withcredentials:
