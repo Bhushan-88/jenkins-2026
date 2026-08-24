@@ -9,7 +9,7 @@ pipeline {
         }
         stage("build"){
             steps{
-                sh "docker build -t two-tire-flask-app ."
+                sh "docker build -t two-tier-flask-app ."
                 echo "docker build stage success"
             }
             
