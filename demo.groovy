@@ -28,7 +28,7 @@ pipeline {
                         , passwordVariable: "dockerHubPass"
                         , usernameVariable: "dockerHubUser"
                         )]) {
-                        sh "docker login -u ${dockerHubUser} -p ${dockerHubPass}"
+                        sh "docker login -u ${env.dockerHubUser} -p ${dockerHubPass}"
                     
                     }
                 }  
