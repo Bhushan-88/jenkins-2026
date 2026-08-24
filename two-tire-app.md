@@ -13,3 +13,4 @@ ubuntu@ip-172-31-39-22:~$ sudo chown -R ubuntu jenkins/workspace/two-tire/mysql-
 ## Now push image on registory Dockerhub
 add dockerhub cred in jenkins credentias
 seect username and password 
+id:dockerHubCreds
