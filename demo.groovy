@@ -1,24 +1,15 @@
 pipeline {
-    agent any
-     stages {
-        stage('pull') {
-            steps {
-                git 'https://github.com/your-repo.git'
-            }
-        }
-    }
-} 
-
-pipeline {
-    agent any
+    agent { label "dev"};
     stages{
         stage("code"){
             steps{
+                git url: "https://github.com/Bhushan-88/two-tier-flask-app.git", branch: "master"
                 echo "code clone done"
             }
         }
         stage("build"){
             steps{
+                sh "docker build -t two-tire-flask-app ."
                 echo "docker build stage success"
             }
             
@@ -29,8 +20,19 @@ pipeline {
             }
             
         }
+        stage("Push to Docker Hub"){
+            steps{
+                script{
+                    withCredentials(){
+                        sh
+                    docker_push("dockerHubCreds","two-tier-flask-app")
+                    }
+                }  
+            }
+        }
         stage("deploy"){
-            stpes{
+            steps{
+                sh "docker compose up -d --build flask-app"
                 echo "deploy by docker compose"
             }
             
