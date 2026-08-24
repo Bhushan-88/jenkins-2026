@@ -7,7 +7,7 @@ pipeline {
             }
         }
     }
-}  
+} 
 
 pipeline {
     agent any
