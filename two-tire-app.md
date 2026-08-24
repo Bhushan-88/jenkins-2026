@@ -6,3 +6,4 @@ agent node :
 install docker, docker-compose-v2 and java
 sudo usermod -aG docker ubuntu (if on master add jenkins user also)
 add  agent { label "dev"}; in Jenkinsfile
+sudo systemctl restart jenkins.service (on master)
