@@ -23,7 +23,8 @@ pipeline {
         stage("Push to Docker Hub"){
             steps{
                 script{
-                    withCredentials([usernamePassword(credentialsId: "dockerHubCreds")]) {
+                    withCredentials([usernamePassword(
+                        credentialsId: "dockerHubCreds")]) {
                         sh "docker login -u ${USERNAME} -p ${PASSWORD}"
                     
                     }
