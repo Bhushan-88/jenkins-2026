@@ -1,2 +1,2 @@
 install jenkins 
-install 
+install plugin :stage view
