@@ -29,7 +29,7 @@ pipeline {
                         , usernameVariable: "dockerHubUser"
                         )]) {
                         sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
-                        sh "docker imatag two-tire-flask-app ${env.dockerHubUser}/two-tire-flask-app:latest"
+                        sh "docker image tag two-tire-flask-app ${env.dockerHubUser}/two-tire-flask-app:latest"
                         sh "docker push ${env.dockerHubUser}/two-tire-flask-app:latest"
                     
                     }
