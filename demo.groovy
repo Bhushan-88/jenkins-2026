@@ -24,7 +24,7 @@ pipeline {
             steps{
                 script{
                     withCredentials(){
-                
+                    sh ""
                     docker_push("dockerHubCreds","two-tier-flask-app")
                     }
                 }  
