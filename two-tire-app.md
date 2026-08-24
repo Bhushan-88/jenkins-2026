@@ -11,4 +11,4 @@ access dev-agent IP:5000
 ubuntu@ip-172-31-39-22:~$ sudo chown -R ubuntu jenkins/workspace/two-tire/mysql-data/ (because jenkins has not permission of mysl_data (if on dev-agent change user ubuntu ))
 
 ## Now push image on registory Dockerhub
-add dockerhub cred in jenkins ced
+add dockerhub cred in jenkins cred
