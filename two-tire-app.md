@@ -21,4 +21,4 @@ add in pipeline - withcredentials:
  In jenkins pipeline ->configure ->GitHub project ->add github repo url And select trigger ->GitHub hook trigger for GITScm polling (It will trigger automatically when any changes happen in code)
 
  ## RBACK
-Role-based Authorization Strategy 
+Install plugin - Role-based Authorization Strategy 
