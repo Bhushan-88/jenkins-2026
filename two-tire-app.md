@@ -23,3 +23,5 @@ add in pipeline - withcredentials:
  ## RBACK
 Install plugin - Role-based Authorization Strategy 
 Goto:manage jenkins ->Security->Authorization->Role-based stategy
+Manage Jenkins
+Role Management
