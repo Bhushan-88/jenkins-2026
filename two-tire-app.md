@@ -30,4 +30,4 @@ Next:Manage Jenkins->Role Management->Manage role->Role to add->name of role and
 Goto :google-Manage your Google Account-enable two-stp-verification
 2.search app password in Manage your Google Account
 create app password
-pass=wixs evvy rfwt qggx
+Copy pass=wixs evvy rfwt qggx
