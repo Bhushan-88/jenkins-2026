@@ -32,4 +32,4 @@ Goto :google-Manage your Google Account-enable two-stp-verification
 create app password
 Copy pass=wixs evvy rfwt qggx
 3.Add gmail and app pass in Jenkins credentials->username and password
-4.
+4.find sm
