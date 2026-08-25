@@ -22,4 +22,4 @@ add in pipeline - withcredentials:
 
  ## RBACK
 Install plugin - Role-based Authorization Strategy 
-Goto:manage jenkins ->Security->
+Goto:manage jenkins ->Security->Authorization
