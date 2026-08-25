@@ -38,9 +38,8 @@ smtp.gmail.com
 SMTP Port:
 465
 Advanced
-Edited
-Credentials
 
+Credentials
 bhushandurgawli1@gmail.com/****** (this is my gmail pass)
 Add
 
