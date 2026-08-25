@@ -47,7 +47,6 @@ Use SSL
 Use SMTP Authentication ?
 User Name
 bhushandurgawli1@gmail.com
-For security when using authentication it is recommended to enable either TLS or SSL
 Password
 •••••••••••••••••••
 
