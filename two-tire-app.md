@@ -51,7 +51,7 @@ Password
 •••••••••••••••••••
 
 Use SSL
-?
+
 
 Use TLS
 SMTP Port
