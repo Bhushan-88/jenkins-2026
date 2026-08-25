@@ -43,3 +43,29 @@ Credentials
 bhushandurgawli1@gmail.com/****** (this is my gmail pass)
 Use SSL
 
+----------------------------------------------------------
+Use SMTP Authentication
+?
+User Name
+bhushandurgawli1@gmail.com
+For security when using authentication it is recommended to enable either TLS or SSL
+Password
+•••••••••••••••••••
+
+Use SSL
+?
+
+Use TLS
+SMTP Port
+?
+465
+Reply-To Address
+bhushandurgawli1@gmail.com
+Charset
+UTF-8
+
+Test configuration by sending test e-mail
+Test e-mail recipient
+bhushandurgawli55@gmail.com
+Test configuration
+Email was successfully sent
