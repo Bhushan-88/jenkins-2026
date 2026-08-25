@@ -1,4 +1,5 @@
 pipeline {
+    
     agent { label "dev"};
     stages{
         stage("code"){
@@ -44,7 +45,7 @@ pipeline {
             
         }
     }
-    
+
 }
 
 
