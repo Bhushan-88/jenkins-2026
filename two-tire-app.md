@@ -35,5 +35,5 @@ Copy pass=wixs evvy rfwt qggx
 4.find Manage Jenkins->System->SMTP
 SMTP server:
 smtp.gmail.com
-SMTP Port
+SMTP Port:
 465
