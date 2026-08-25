@@ -23,4 +23,4 @@ add in pipeline - withcredentials:
  ## RBACK
 Install plugin - Role-based Authorization Strategy 
 Goto:manage jenkins ->Security->Authorization->Role-based stategy
-Next:Manage Jenkins->Role Management->Manage role->Role to add->name 
+Next:Manage Jenkins->Role Management->Manage role->Role to add->name of role and access
