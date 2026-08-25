@@ -52,10 +52,7 @@ Password
 
 Use SSL
 
-
-Use TLS
-SMTP Port
-?
+SMTP Port?
 465
 Reply-To Address
 bhushandurgawli1@gmail.com
