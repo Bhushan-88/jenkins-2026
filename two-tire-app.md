@@ -26,4 +26,4 @@ Goto:manage jenkins ->Security->Authorization->Role-based stategy
 Next:Manage Jenkins->Role Management->Manage role->Role to add->name of role and access
 
 ## add email-Notification
-add SMTPS port 45
+add SMTPS port 465 in sec grp
