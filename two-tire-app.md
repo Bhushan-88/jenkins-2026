@@ -18,4 +18,4 @@ add in pipeline - withcredentials:
 
  ## add webhook URL github repo settings
  http://100.48.18.248:8080/github-webhook/
- In jenkins pipeline -
+ In jenkins pipeline ->configure 
