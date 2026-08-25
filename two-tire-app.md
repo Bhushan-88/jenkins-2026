@@ -33,6 +33,7 @@ create app password
 Copy pass=wixs evvy rfwt qggx
 3.Add gmail and app pass in Jenkins credentials->username and password
 4.find Manage Jenkins->System->SMTP
+
 SMTP server:
 smtp.gmail.com
 SMTP Port:
