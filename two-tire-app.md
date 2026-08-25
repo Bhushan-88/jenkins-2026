@@ -41,6 +41,5 @@ Advanced
 
 Credentials
 bhushandurgawli1@gmail.com/****** (this is my gmail pass)
-Add
 
 Use SSL
