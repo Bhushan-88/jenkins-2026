@@ -27,4 +27,4 @@ Next:Manage Jenkins->Role Management->Manage role->Role to add->name of role and
 
 ## add email-Notification
 add SMTPS port 465 in sec grp
-Goto :google-Manage your Google Account-ena
+Goto :google-Manage your Google Account-enable two-stp
