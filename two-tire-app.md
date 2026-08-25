@@ -15,4 +15,4 @@ add dockerhub cred in jenkins credentias
 seect username and password 
 id:dockerHubCreds - and  save
 add in pipeline - withcredentials:
- ## add webhook in 
+ ## add webhook in github repo setting
