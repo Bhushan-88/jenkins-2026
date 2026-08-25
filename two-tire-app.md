@@ -29,5 +29,5 @@ Next:Manage Jenkins->Role Management->Manage role->Role to add->name of role and
 1.add SMTPS port 465 in sec grp
 Goto :google-Manage your Google Account-enable two-stp-verification
 2.search app password in Manage your Google Account
-create app 
+create app password
 wixs evvy rfwt qggx
