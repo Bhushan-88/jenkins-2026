@@ -65,4 +65,19 @@ bhushandurgawli55@gmail.com
 Test configuration
 Email was successfully sent
 
-## 
+## Install Tivy on dev-agent
+```bash
+sudo apt-get install wget gnupg
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb generic main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+sudo apt-get update
+sudo apt-get install trivy 
+
+2.
+trivy fs .
+trivy fs . -o results.json
+```
+## Shared Library (using for DRY -do not repeat yourself)
+Create github Repo- jenkins-shared-library
+Manage Jenkins->System->find Global Trusted Pipeline Libraries
+
