@@ -81,4 +81,13 @@ trivy fs . -o results.json
 Create github Repo- jenkins-shared-library
 Manage Jenkins->System->find Global Trusted Pipeline Libraries
 
- 
+Name :
+Shared
+Default version
+main
+
+Modern SCM
+Project Repository
+https://github.com/Bhushan-88/jenkins-shared-library.git
+
+save.
