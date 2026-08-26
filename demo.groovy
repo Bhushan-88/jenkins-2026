@@ -1,17 +1,21 @@
+@Library("Shared") _
 pipeline {
     
     agent { label "dev"};
+
     stages{
-        stage("code"){
+        stage("code clone"){
             steps{
-                git url: "https://github.com/Bhushan-88/two-tier-flask-app.git", branch: "master"
-                echo "code clone done"
+                script{
+                    clone("https://github.com/Bhushan-88/two-tier-flask-app.git","master")
+                }
             }
         }
-        stage("trivy scan"){
+        stage("Trivy File System Scan"){
             steps{
-                sh "trivy fs . -o results.json"
-                echo "trivy scan done"
+                script{
+                    trivy_fs()
+                }
             }
         }
         stage("build"){
@@ -30,16 +34,7 @@ pipeline {
         stage("Push to Docker Hub"){
             steps{
                 script{
-                    withCredentials([usernamePassword(
-                        credentialsId: "dockerHubCreds"
-                        , passwordVariable: "dockerHubPass"
-                        , usernameVariable: "dockerHubUser"
-                        )]) {
-                        sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
-                        sh "docker image tag two-tier-flask-app ${env.dockerHubUser}/two-tier-flask-app:latest"
-                        sh "docker push ${env.dockerHubUser}/two-tier-flask-app:latest"
-                    
-                    }
+                    docker_push("dockerHubCreds","two-tier-flask-app")
                 }  
             }
         }
@@ -72,6 +67,7 @@ pipeline {
 }
 
 
+# Demo.groovy with shared library
 
 @Library("Shared") _
 pipeline{
@@ -138,3 +134,47 @@ post{
         }
     }
 }
+
+
+
+# Shared Library code 
+# 
+def call(String url, String branch) {
+    git url: "${url}", branch: "${branch}"
+}
+def call() {
+    sh "trivy fs . -o results.json"
+}
+def call(String credId, String imageName) {
+  withCredentials([usernamePassword(
+                        credentialsId: "${credId}"
+                        , passwordVariable: "dockerHubPass"
+                        , usernameVariable: "dockerHubUser"
+                        )]) {
+                        sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
+                        sh "docker image tag ${imageName} ${env.dockerHubUser}/${imageName}"
+                        sh "docker push ${env.dockerHubUser}/${imageName}:latest"
+                    }
+}
+
+
+
+
+
+
+## anathore project used shared library
+
+    @Library("Shared") _
+    pipeline{
+        agent { label 'dev-server' }
+        
+        stages{
+            stage("Code Clone"){
+                steps{
+                    script{
+                    clone("https://github.com/Bhushan-88/node-todo-cicd.git", "master")
+                    }
+                }
+            }
+        }
+    }
